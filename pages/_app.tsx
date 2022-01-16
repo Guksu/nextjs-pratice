@@ -1,8 +1,15 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import NavBar from "../components/NavBar";
+
+// 가장 먼저 랜더링 되는 컴포넌트이다.
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <NavBar />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
