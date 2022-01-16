@@ -1,13 +1,14 @@
 import type { AppProps } from "next/app";
-import NavBar from "../components/NavBar";
+import Layout from "../components/Layout";
 
 // 가장 먼저 랜더링 되는 컴포넌트이다.
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <NavBar />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
