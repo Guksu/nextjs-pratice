@@ -5,7 +5,7 @@ export default function Home({ results }: any) {
   return (
     <>
       <Head>
-        <title>NextJs Pratice</title>
+        <title>Home</title>
       </Head>
       <h1>hi</h1>
       <h1>{results}</h1>
@@ -13,6 +13,7 @@ export default function Home({ results }: any) {
   );
 }
 
+// SSR
 export async function getServerSideProps() {
   const results = "This is SSR";
   return {
