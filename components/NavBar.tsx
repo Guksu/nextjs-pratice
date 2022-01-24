@@ -16,6 +16,11 @@ function NavBar() {
             About
           </a>
         </Link>
+        <Link href="/search">
+          <a style={{ color: router.pathname === "/Search" ? "red" : "green" }}>
+            Search
+          </a>
+        </Link>
       </nav>
     </>
   );
