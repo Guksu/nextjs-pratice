@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import { NextPageContext } from "next";
 import Head from "next/head";
 
 export default function Home({ results }: any) {
@@ -14,7 +14,7 @@ export default function Home({ results }: any) {
 }
 
 // SSR
-export async function getServerSideProps() {
+export async function getServerSideProps(ctx: NextPageContext) {
   const results = "This is SSR";
   return {
     props: {

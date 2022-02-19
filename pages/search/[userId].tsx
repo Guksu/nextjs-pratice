@@ -23,9 +23,11 @@ export async function getStaticPaths() {
   // });
 
   // fallback이 false인 경우 userId를 3으로 입력할 경우 404페이지로 이동한다.
+  //  revalidate은 10초마다 다시 빌딩한다는 뜻
   return {
     paths: [{ params: { userId: "1" } }, { params: { userId: "2" } }],
     fallback: false,
+    revalidate: 10,
   };
 }
 
